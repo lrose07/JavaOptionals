@@ -11,7 +11,7 @@ class OptionalSolver {
         String mostCommon = buildMap(str).toString();
         Logger lggr = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
         lggr.log(Level.INFO, mostCommon);
-        lggr.log(Level.INFO, countMap.toString());
+        lggr.log(Level.INFO, "{0}", !countMap.isEmpty() ? countMap.toString() : "No data");
     }
 
     private Optional<Character> buildMap(String s) {
